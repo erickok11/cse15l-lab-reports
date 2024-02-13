@@ -56,3 +56,5 @@ public class ListTests {
     }
 }
 ```
+### Symptoms
+#include[!method1fails.png]
