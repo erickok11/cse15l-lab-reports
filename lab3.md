@@ -99,6 +99,8 @@ Here is the screenshot:
 ![Image](chat2.png)
 ![Image](chat3.png)
 ![Image](chat4.png)
+
+### -mtime command line option
 ```
 find ./technical/911report  -mtime -7
 ./technical/911report
@@ -120,3 +122,40 @@ find ./technical/911report  -mtime -7
 ./technical/911report/chapter-10.txt
 ./technical/911report/chapter-11.txt
 ```
+The command line option mtime means the modification time and the argument -7 means that less than 7 days ago. Using this option will find all the files that are modified less than 7 days ago in that directory. Since I downloaded the files 5 days ago, it will show all the files in that directories.
+
+```
+find ./technical/911report  -mtime 7
+```
+The argument 7 means that exactly 7 days ago. Since my files are all modified 5 days ago, it will not output anything.
+
+### -size command line option
+```
+find ./technical/911report  -size +1
+./technical/911report
+./technical/911report/chapter-13.4.txt
+./technical/911report/chapter-13.5.txt
+./technical/911report/chapter-13.1.txt
+./technical/911report/chapter-13.2.txt
+./technical/911report/chapter-13.3.txt
+./technical/911report/chapter-3.txt
+./technical/911report/chapter-2.txt
+./technical/911report/chapter-1.txt
+./technical/911report/chapter-5.txt
+./technical/911report/chapter-6.txt
+./technical/911report/chapter-7.txt
+./technical/911report/chapter-9.txt
+./technical/911report/chapter-8.txt
+./technical/911report/preface.txt
+./technical/911report/chapter-12.txt
+./technical/911report/chapter-10.txt
+./technical/911report/chapter-11.txt
+```
+The command line option means the size of the file, the argument +1 means that larger than 1(the default unit of this command is kilobytes). Since every files in this directory is larger than 1k, it will output every files.
+
+```
+find ./technical/911report  -size 1
+```
+The argument of this command is finding files that has exactly 1k of size. Since there are no files with size of 1k, it will not output anything.
+
+### -inum command line option
