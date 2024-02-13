@@ -95,4 +95,10 @@ Since the list method add has different implementations according to the java do
 ## Part 2
 The command that I choose is the find command, and I ask Chatgpt to give me some interesting command line option.
 Here is the screenshot:
-
+![Image](chat1.png)
+![Image](chat2.png)
+![Image](chat3.png)
+![Image](chat4.png)
+```
+hi
+```
