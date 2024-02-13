@@ -38,8 +38,8 @@ class ChatServer{
 }
 ```
 ![Image](ser1.png)
-* The handleRequest Method is being called
-* The relevant fields to this method is the line ArrayList
+* The handleRequest Method is being called, after that we use getQuery method to get the query of the link, then we use split method to split the string into to parts. After that we use add method to add user and messages into the appropriate arraylist.
+* The relevant fields to this method is the ArrayList
 * When there is a request of "add-message" the ArrayList is updated by adding the user and message to the array list. In this picture, user "eric" and the message "abcdefg" is added to the arraylist.
 
 ![Image](ser2.png)
@@ -48,8 +48,11 @@ class ChatServer{
 * When there is a request of "add-message" the ArrayList is updated by adding the user and message to the array list. In this picture, user "joe" and the message "How are you" is added to the arraylist.
 
 ## Part 2
+### path to private key on my computer
 ![Image](prikey.png)
+### path to public key on ieng6 file system
 ![Image](pubkey.png)
+### logging into ieng6 without being prompted for password
 ![Image](login.png)
 * When I log into my ieng6 account, this time it did not prompt me for entering the password. That means the key is successfully saved in my computer.
 
