@@ -159,3 +159,40 @@ find ./technical/911report  -size 1
 The argument of this command is finding files that has exactly 1k of size. Since there are no files with size of 1k, it will not output anything.
 
 ### -inum command line option
+```
+find ./technical/911report -inum 16948134
+./technical/911report/chapter-3.txt
+```
+The inum command line will find the file with matching inode. The argument 16948134 is the inode number of the file you want to find.
+```
+find ./technical/911report -inum 16948
+```
+The argument here is 16948. It does not have any output since there are no matching file with that inode number
+
+### -perm command line option
+```
+find ./technical/911report -perm 0755
+./technical/911report
+./technical/911report/chapter-13.4.txt
+./technical/911report/chapter-13.5.txt
+./technical/911report/chapter-13.1.txt
+./technical/911report/chapter-13.2.txt
+./technical/911report/chapter-13.3.txt
+./technical/911report/chapter-3.txt
+./technical/911report/chapter-2.txt
+./technical/911report/chapter-1.txt
+./technical/911report/chapter-5.txt
+./technical/911report/chapter-6.txt
+./technical/911report/chapter-7.txt
+./technical/911report/chapter-9.txt
+./technical/911report/chapter-8.txt
+./technical/911report/preface.txt
+./technical/911report/chapter-12.txt
+./technical/911report/chapter-10.txt
+./technical/911report/chapter-11.txt
+```
+The command line option will find the files that has the exact permission. Since all the files in the directory has the permisson 0755, it will output all the files.
+```
+find ./technical/911report -perm 075
+```
+The argument here is 075. Since there are no matching files with that permission number, it will output nothing.
